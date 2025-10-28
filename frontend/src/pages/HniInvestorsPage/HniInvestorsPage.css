@@ -1,0 +1,177 @@
+.hni-section {
+  background-color: transparent;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #1e293b;
+  margin-bottom: 30px;
+}
+
+
+
+.hni-title {
+  font-size: 3rem;
+  font-weight: 700;
+  width: 1009px;
+  /* margin-bottom: 1rem; */
+  background: linear-gradient(90deg,#10b981,  #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  transition: background-position 0.5s ease;
+  background-size: 200% auto;
+  animation: shimmer 3s infinite linear;
+} 
+.hni-title:hover {
+  background-position: right center;
+}
+
+.hni-subtext {
+  font-family: 'Formula1 Display', sans-serif;
+  font-size: 1.02rem;
+  font-weight: 500;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  color: #d1d5db3d; /* Light gray for professional tone */
+  text-align: start;
+  letter-spacing: 0.9px;
+  line-height: 1.7;
+  background: linear-gradient(90deg, #e0e0e0, #ffffffc1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.hni-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  position: relative;
+}
+
+/* Circular ring style */
+.hni-card {
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: #4d4f5276;
+  border: 8px solid #1e3b8a00;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+  transition: all 0.4s ease;
+  transform: translateY(40px);
+  opacity: 0;
+  animation: slideFadeUp 1s ease forwards;
+  cursor: pointer;
+}
+
+/* Hover effect: highlight only hovered circle */
+.hni-card:hover {
+  border-color: #000000cc; /* green */
+  background: transparent; 
+  
+  transform: scale(1.06);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: 0.4s;
+}
+
+.hni-card h3 {
+  
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  background: linear-gradient(90deg,#ffffffd6, #dd3bf6, #3b4bf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  transition: background-position 0.5s ease;
+  background-size: 200% auto;
+    animation: gradientShimmer 6s ease-in-out infinite;
+
+}
+
+.hni-card p {
+  font-family: 'Formula1 Display', sans-serif;
+  font-size: 1.002rem;
+  font-weight: 500;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  color: #d1d5db3d; /* Light gray for professional tone */
+  text-align: center;
+  letter-spacing: 0.9px;
+  line-height: 1.5rem;
+  background: linear-gradient(90deg, #e0e0e0, #ffffffc1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+
+/* Text color flip on hover */
+.hni-card:hover h3,
+.hni-card:hover p {
+  color: white;
+}
+
+/* Entry animation delays */
+.hover-fadeup {
+  animation-delay: 0.3s;
+}
+.hover-fadeup-delay {
+  animation-delay: 0.6s;
+}
+.hover-fadeup-delay2 {
+  animation-delay: 0.9s;
+}
+
+@keyframes slideFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button styling remains unchanged */
+.submit-button-wrap {
+  margin-top: 3rem;
+}
+
+.submit-button {
+    font-family: 'Formula1 Display', sans-serif;
+  letter-spacing: 1.3px;
+  line-height: 1.7rem; 
+  /* s     */
+
+  background-color: #1e3a8a;
+  color: white;
+  
+  background: linear-gradient(90deg, #10b981, #6366f1);
+
+
+
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
+  margin-top: 14px;
+}
+
+.submit-button:hover {
+  background: transparent;
+  color: #6366f1;
+  border: 2px solid #6366f1;
+  /* border: none; */
+  transform: scale(1.05);
+  transition: 0.5s;
+}
+

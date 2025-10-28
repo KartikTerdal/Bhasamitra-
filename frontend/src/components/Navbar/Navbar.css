@@ -1,0 +1,231 @@
+/* ------------------- FONT IMPORTS ------------------- */
+@font-face {
+  font-family: 'notey';
+  src: url('/fonts/CookieCrisp-L36ly.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'simpl';
+  src: url('/fonts/SunnySpellsBasicRegular-Yz1Wv.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Cursivr';
+  src: url('/fonts/ArianaVioleta-dz2K.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Formula1 Display';
+  src: url('/fonts/Robotica.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'cursive';
+  src: url('/fonts/AnandaBlackPersonalUseRegular-rg9Rx.ttf') format('truetype');
+}
+
+
+
+/* ------------------- NAVBAR BASE ------------------- */
+.faqs-heading {
+  font-family: 'Cursivr';
+  font-size: clamp(2.3rem, 5vw, 3rem);
+  position: relative;
+  display: inline-block;
+}
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem 2rem;
+  box-sizing: border-box;
+
+  /* translucent gradient glass style */
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.65),
+    rgba(250, 250, 255, 0.65),
+    rgba(255, 255, 255, 0.65)
+  );
+  backdrop-filter: blur(6px);
+  transition: all 0.4s ease-in-out;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* SCROLLED — adds more depth */
+.navbar.navbar-scrolled {
+  backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.304);
+  box-shadow: 0 4px 20px rgba(130, 90, 255, 0.15);
+  transition: all 0.5s ease;
+}
+
+/* ------------------- LOGO ------------------- */
+.navbar .logo {
+  width: 110px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.navbar .logo:hover {
+  transform: scale(1.05);
+}
+
+/* ------------------- MENU ------------------- */
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  font-family: 'cursive';
+  color: #1a1a1a;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+  text-transform: capitalize;
+}
+
+.navbar-menu li {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navbar-menu li::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #7d5fff, #9f8bff);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.navbar-menu li:hover::after {
+  width: 100%;
+}
+
+.navbar-menu li:hover {
+  color: #7d5fff;
+}
+
+/* ------------------- RIGHT SECTION ------------------- */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.navbar button {
+  background: #000;
+  color: #fff;
+  font-family: 'notey';
+  border: none;
+  border-radius: 40px;
+  padding: 10px 28px;
+  font-size: 1rem;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.navbar button:hover {
+  background: linear-gradient(90deg, #7d5fff, #9f8bff);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(130, 90, 255, 0.3);
+}
+
+/* ------------------- PROFILE DROPDOWN ------------------- */
+.navbar-profile {
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-profile-dropdown {
+  position: absolute;
+  display: none;
+  right: 0;
+  top: 45px;
+  z-index: 10;
+}
+
+.navbar-profile:hover .nav-profile-dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #ffffffd9;
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 12px 24px;
+  border: 1px solid rgba(130, 90, 255, 0.3);
+  box-shadow: 0 8px 30px rgba(130, 90, 255, 0.15);
+  animation: fadeIn 0.3s ease;
+}
+
+.nav-profile-dropdown li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-family: 'simpl';
+  color: #333;
+}
+
+.nav-profile-dropdown li:hover {
+  color: #7d5fff;
+}
+
+/* ------------------- MEDIA QUERIES ------------------- */
+@media (max-width: 1050px) {
+  .navbar-menu {
+    gap: 20px;
+    font-size: 0.95rem;
+  }
+  .navbar button {
+    padding: 8px 24px;
+  }
+}
+
+@media (max-width: 750px) {
+  .navbar-menu {
+    display: none;
+  }
+}
+
+/* Responsive toggle (hamburger menu ready) */
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0.8rem 1.2rem;
+  }
+
+  .navbar .logo {
+    width: 90px;
+  }
+
+  .navbar-right button {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+/* ------------------- ANIMATIONS ------------------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

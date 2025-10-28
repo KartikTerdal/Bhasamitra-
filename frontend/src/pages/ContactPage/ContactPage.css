@@ -1,0 +1,230 @@
+/* ================================
+   🌈 CONTACT PAGE STYLES
+   ================================ */
+
+/* ===== Custom Fonts ===== */
+@font-face {
+  font-family: 'notey';
+  src: url('/fonts/CookieCrisp-L36ly.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'simpl';
+  src: url('/fonts/SunnySpellsBasicRegular-Yz1Wv.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Cursivr';
+  src: url('/fonts/ArianaVioleta-dz2K.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Formula1 Display';
+  src: url('/fonts/Robotica.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'cursive';
+  src: url('/fonts/AnandaBlackPersonalUseRegular-rg9Rx.ttf') format('truetype');
+}
+
+/* ===== Section Layout ===== */
+.contact-section {
+  position: relative;
+  width: 100%;
+  padding: 120px 6vw;
+  text-align: center;
+  background: #fdfcff00;
+  color: #000;
+  overflow: hidden;
+  font-family: 'Formula1 Display', sans-serif;
+}
+
+/* Violet Glow Background */
+.contact-bg {
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 900px;
+  background: radial-gradient(circle at center, rgba(140, 82, 255, 0.45), rgba(255, 255, 255, 0) 70%);
+  filter: blur(120px);
+  z-index: -1;
+  animation: contactGlow 12s ease-in-out infinite alternate;
+}
+
+@keyframes contactGlow {
+  0% { transform: translateX(-50%) scale(1); opacity: 0.7; }
+  100% { transform: translateX(-50%) scale(1.15); opacity: 1; }
+}
+
+/* ===== Headings ===== */
+.contact-heading {
+  font-family: 'Cursivr';
+  font-size: clamp(3rem, 6vw, 5rem);
+  position: relative;
+  display: inline-block;
+  color: #000;
+}
+
+.magic-text {
+  color: #000;
+  position: relative;
+  z-index: 2;
+}
+
+.badge {
+  position: absolute;
+  top: 60%;
+  left: 63%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 4px 14px;
+  border-radius: 8px;
+  font-family: 'simpl';
+  font-size: 0.9rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.contact-subtitle {
+  font-family: 'Formula1 Display';
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 1.8rem;
+  letter-spacing: 3px;
+}
+
+.contact-desc {
+  font-family: 'simpl';
+  max-width: 640px;
+  margin: 10px auto 60px;
+  color: #555;
+  line-height: 1.5;
+  font-size: 23px;
+}
+
+/* ===== Form Container ===== */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  flex-direction: column;
+    margin-top: 100px;
+
+}
+
+.form-card {
+  background: #f9f9ff;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 4px 25px rgba(140, 82, 255, 0.15);
+  max-width: 500px;
+  width: 100%;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.form-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(140, 82, 255, 0.25);
+}
+
+.form-subheading {
+  font-family: 'notey';
+  font-size: 1.7rem;
+  color: #333;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* ===== Inputs ===== */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.input-field {
+  font-family: 'Courier New', Courier, monospace ;
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  color: #222;
+}
+
+.input-field:focus {
+  border-color: #8c52ff;
+  box-shadow: 0 0 8px rgba(140, 82, 255, 0.2);
+}
+
+.textarea-field {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.date-field {
+  font-family: 'simpl';
+}
+
+/* ===== Button ===== */
+.submit-btn {
+  background: linear-gradient(90deg, #8c52ff, #b78eff);
+  color: #fff;
+  border: none;
+  padding: 14px 0;
+  font-size: 1.2rem;
+  font-family: 'notey';
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(140, 82, 255, 0.3);
+}
+
+.submit-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* ===== Output Section ===== */
+.output-section {
+  margin-top: 20px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.output-section h3 {
+  margin-top: 18px;
+  font-family: 'Formula1 Display';
+  color: #8c52ff;
+}
+
+.output-section p {
+  font-family: 'simpl';
+  font-size: 1rem;
+  margin-top: 6px;
+  color: #444;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .form-card {
+    padding: 30px 20px;
+  }
+  .contact-desc {
+    font-size: 1rem;
+  }
+  .contact-heading {
+    font-size: 2.5rem;
+  }
+  .badge {
+    font-size: 0.8rem;
+    top: 70%;
+    left: 60%;
+  }
+}

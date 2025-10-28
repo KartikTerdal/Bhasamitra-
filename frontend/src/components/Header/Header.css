@@ -1,0 +1,68 @@
+.headerr {
+    height: 34vw;
+    width: 30px auto;
+    background: url('/yeah.jpeg') no-repeat; 
+    background-size: contain;
+    
+    animation: fadeIn 1s;
+}
+.header-content{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 2vw;
+    max-width: 50%;
+    bottom: 24%;
+    left: 14%; 
+    animation: fadeIn 4s;
+ 
+}
+.header-content h2{
+    font-weight: 500;
+    color: hwb(44 80% 0%);
+    font-size: max(4.5vw,22px);
+}
+.header-content p{
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    font-size: 1.2vw;
+    background-color: hsla(0, 0%, 0%, 0.7);
+}
+.header-content a{
+    border: none;
+    color: #000000b3;
+    font-weight: 600;
+    padding: 1vw 2.4vw;
+    background-color: hsl(44, 65%, 56%);
+    font-size: (1vw, 14px);
+    border-radius: 50px;
+    cursor: pointer;
+
+}
+
+.header-content a:hover{    
+    background-color: hsl(42, 67%, 44%);
+    transition: 0.4s;
+
+}
+@media (max-width:1050px){
+    .header{
+        height: 38vw;
+    }
+    .header-content{
+        max-width: 44%;
+    }
+}
+@media (max-width:750px){
+
+    .header-content{
+        max-width: 54%;
+    }
+    .header-content p{
+        display: none;
+    }
+    .header-content button{
+        padding: 2vw 4vw;
+    }
+}

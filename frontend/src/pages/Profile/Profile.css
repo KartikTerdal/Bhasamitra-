@@ -1,0 +1,193 @@
+.profile-container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.cover-image img {
+    margin-top: 10px;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.profile-info {
+    text-align: center;
+    padding: 20px;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-top: -60px;
+    object-fit: cover;
+}
+
+h2 {
+    margin: 10px 0 5px;
+    font-size: 24px;
+}
+
+.verified-badge {
+    color: blue;
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+.username, .followers {
+    color: gray;
+    font-size: 14px;
+}
+
+.description {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.social-media-stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background: #f8f8f8;
+}
+
+.social-stat {
+    text-align: center;
+}
+
+.stat-count {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.stat-platform {
+    font-size: 14px;
+    color: gray;
+}
+
+.video-section {
+    display: flex;
+    gap: 15px;
+    padding: 20px;
+    overflow-x: auto;
+}
+
+.video-card {
+    flex: 0 0 30%;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #eee;
+    text-align: center;
+}
+
+.video-card video {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.video-platform {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.video-user {
+    font-size: 14px;
+    color: gray;
+}
+
+
+
+/* For screens smaller than 1200px (Laptops) */
+@media (max-width: 1200px) {
+    .profile-container {
+        max-width: 750px;
+    }
+    .cover-image img {
+        height: 200px;
+    }
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+        margin-top: -50px;
+    }
+    .video-card {
+        flex: 0 0 45%;
+    }
+}
+
+/* For screens smaller than 992px (Tablets) */
+@media (max-width: 992px) {
+    .profile-container {
+        max-width: 600px;
+    }
+    .cover-image img {
+        height: 180px;
+    }
+    .profile-pic {
+        width: 90px;
+        height: 90px;
+        margin-top: -45px;
+    }
+    .video-section {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .video-card {
+        flex: 0 0 80%;
+    }
+}
+
+/* For screens smaller than 768px (Mobile) */
+@media (max-width: 768px) {
+    .profile-container {
+        max-width: 100%;
+        margin: 10px;
+    }
+    .cover-image img {
+        height: 150px;
+    }
+    .profile-pic {
+        width: 80px;
+        height: 80px;
+        margin-top: -40px;
+    }
+    .social-media-stats {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .video-card {
+        flex: 0 0 100%;
+    }
+}
+
+/* For screens smaller than 480px (Small Mobile) */
+@media (max-width: 480px) {
+    h2 {
+        font-size: 20px;
+    }
+    .username, .followers {
+        font-size: 12px;
+    }
+    .description {
+        font-size: 14px;
+    }
+    .stat-count {
+        font-size: 18px;
+    }
+    .stat-platform {
+        font-size: 12px;
+    }
+    .video-card video {
+        height: 300px;
+    }
+}

@@ -1,0 +1,96 @@
+.survey-container {
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .survey-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+  }
+  
+  .survey-option {
+    width: 500px;
+    padding: 12px 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background: rgb(44, 147, 147);
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .survey-option :hover{
+    background-color: #0000008e;
+    color: white;
+    transition: 3s;
+  }
+  
+  .survey-option.selected {
+    background: black;
+    color: white;
+  }
+  
+  .continue-btn {
+    background: black;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .skip-btn {
+    margin-top: 10px;
+    cursor: pointer;
+    color: gray;
+  }
+
+
+  /* For screens smaller than 992px (Tablets) */
+@media (max-width: 992px) {
+    .survey-container {
+        padding: 40px;
+    }
+    .survey-option {
+        width: 400px;
+        font-size: 14px;
+    }
+}
+
+/* For screens smaller than 768px (Mobile) */
+@media (max-width: 768px) {
+    .survey-container {
+        padding: 30px;
+    }
+    .survey-options {
+        gap: 10px;
+    }
+    .survey-option {
+        width: 80%;
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+    .continue-btn {
+        width: 80%;
+        padding: 10px 18px;
+    }
+}
+
+/* For screens smaller than 480px (Small Mobile) */
+@media (max-width: 480px) {
+    .survey-container {
+        padding: 20px;
+    }
+    .survey-option {
+        width: 100%;
+        font-size: 13px;
+        padding: 10px;
+    }
+    .continue-btn {
+        width: 100%;
+    }
+}
+
+  

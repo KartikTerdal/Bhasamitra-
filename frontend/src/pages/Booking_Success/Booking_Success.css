@@ -1,0 +1,63 @@
+/* Booking Success Page Styles */
+.booking-success-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #8e44ad, #3498db);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.booking-success-card {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    opacity: 0.9;
+}
+
+/* Go Back Button */
+.go-back-btn {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: white;
+    color: #8e44ad;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.go-back-btn:hover {
+    background: #ffffffcc;
+    transform: scale(1.05);
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

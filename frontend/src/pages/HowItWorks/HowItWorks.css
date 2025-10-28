@@ -1,0 +1,196 @@
+@font-face {
+  font-family: 'notey';
+  src: url('/fonts/CookieCrisp-L36ly.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'simpl';
+  src: url('/fonts/SunnySpellsBasicRegular-Yz1Wv.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Cursivr';
+  src: url('/fonts/ArianaVioleta-dz2K.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Formula1 Display';
+  src: url('/fonts/Robotica.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'cursive';
+  src: url('/fonts/AnandaBlackPersonalUseRegular-rg9Rx.ttf') format('truetype');
+}
+
+.howitworks-section {
+  padding: 6rem 1.5rem;
+  background: #ffffff00;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.howitworks-title {
+  font-family: 'Cursivr';
+  font-size: 3rem;
+  color: #111;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.howitworks-subtext {
+  font-family: 'simpl';
+  color: #555;
+  max-width: 700px;
+  text-align: center;
+  margin-bottom: 4rem;
+    font-size: 23px; 
+
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  position: relative;
+}
+
+.how-step {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.9s ease;
+}
+
+.how-step.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.step-left {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step-number {
+  font-family: 'Formula1 Display';
+  font-size: 3rem;
+  color: #8c52ff;
+  font-weight: bold;
+}
+
+.line {
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, #8c52ff, #d0a2ff);
+  margin-top: 10px;
+  border-radius: 4px;
+}
+
+.step-right {
+  flex: 1;
+  font-family: 'simpl';
+}
+
+.step-right .tag {
+  display: inline-block;
+  font-family: 'notey';
+  font-size: 0.8rem;
+  background: linear-gradient(90deg, #a87bff, #d2b8ff);
+  color: rgb(97, 97, 97);
+  border-radius: 1rem;
+  padding: 4px 12px;
+  margin-bottom: 0.6rem;
+  box-shadow: 0 3px 10px rgba(140, 82, 255, 0.25);
+}
+
+.step-right h3 {
+  font-family: 'Cursivr';
+  font-size: 1.7rem;
+  color: #111;
+  margin-bottom: 0.5rem;
+}
+
+.step-right p {
+  font-family: 'basicf';
+  color: #555;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-bottom: 1rem;
+  font-size: 14px; 
+}
+
+.step-btn {
+  font-family: 'notey';
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.6rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.step-btn:hover {
+  background: linear-gradient(90deg, #8c52ff, #b78eff);
+  box-shadow: 0 6px 25px rgba(140, 82, 255, 0.3);
+  transform: translateY(-2px);
+}
+/* The background line track */
+.timeline-container::before {
+  content: "";
+  position: absolute;
+  left: 42px;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: #e4d4ff;
+  border-radius: 4px;
+}
+
+/* The animated violet line that fills as you scroll */
+.timeline-line {
+  margin-left: -45px;
+  position: absolute;
+  left: 42px;
+  top: 0;
+  width: 3px;
+  background: linear-gradient(180deg, #8c52ff, #b78eff);
+  border-radius: 4px;
+  transition: height 0.2s ease-out;
+  z-index: 1;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .how-step {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .step-left {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .step-number {
+    font-size: 2rem;
+  }
+
+  .step-right h3 {
+    font-size: 1.4rem;
+  }
+}
